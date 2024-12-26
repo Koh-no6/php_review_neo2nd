@@ -1,0 +1,244 @@
+
+  body {
+    width: 600px;
+    margin: 50px auto;
+    padding: 0;
+    text-align: left;
+    font-size: 32px;
+    background: rgb(235,100,0);
+    background: linear-gradient(0deg, rgba(235,100,0,1) 0%, rgba(245,127,40,1) 16%, rgba(255,174,0,1) 65%, rgba(255,232,184,1) 93%, rgba(255,247,231,1) 100%);
+    font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    line-height: 1.75;
+    font-size: 16px;
+  }
+  fieldset{
+    border:unset;
+    padding: 30px;
+    background-color: #fff;
+    border-radius:30px;
+  }
+  fieldset legend{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #f40c65;
+    padding-top: 70px;
+  }
+  fieldset legend span{
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+  }
+  fieldset p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fe8930;
+  }
+  fieldset ul{
+    padding-inline-start: 0;
+    margin-block-start: 0;
+  }
+  fieldset li{
+    list-style-type: none;
+  }
+  fieldset input{
+    border: unset;
+    border-radius: 10px;
+    background-color: #ffd61a;
+  }
+  fieldset div{
+    margin-bottom: 20px;
+  }
+  fieldset .text{
+    border: unset;
+    border-radius: 10px;
+    background-color: #fef1b8;
+    width: 400px;
+  }
+  fieldset .btn{
+    text-align: center;
+  }
+  fieldset button{
+    width: 200px;
+    background-color: #fd0390;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 10px auto 0;
+    font-weight: bold;
+    max-width: 500px;
+    color: #fff;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 300ms;
+  }
+  fieldset .list-btn{
+    width: 200px;
+    display: inline-block;
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .result ul{
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fef1b8;
+    border-radius:20px;
+  }
+
+  .result ul li{
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+  .result ul .name{
+    color: #4d5057;
+    font-weight: bold;
+  }
+  .result ul li:first-child{
+    color: #ee3e3b;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .result ul li:nth-child(2) span{
+    display: inline-block;
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin-right: 10px;
+  }
+  .result ul li:nth-child(4){
+    margin-bottom: 0;
+    word-break: break-all;
+  }
+  .result ul li:nth-child(5){
+    width: 100px;
+    background-color: #fda103;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px auto 0;
+    max-width: 500px;
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+    transition: 300ms;
+  }
+  .result ul li:nth-child(5) a{
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+
+  /*** 泡（共通） ***/
+#body .foam{
+  position: fixed; /*画面固定*/
+  bottom: -250px; /*初期位置*/
+  left: 0;
+  border-radius: 50%; /*丸型*/
+  background: #fff; /*雪の色*/
+  opacity: 0.9; /*若干透明に*/
+}
+
+/*** 小さい泡 ***/
+#body .foam:nth-child(1){
+  width: 10px;
+  height: 10px;
+  filter: blur(2px); /*ぼかし*/
+  /* ±240pxの範囲で影(複製)を作る */
+  box-shadow:
+    5vw -40px 0 #ffe8b8,
+    10vw 150px #ffe8b8,
+    15vw -230px #ffe8b8,
+    22vw 240px #ffe8b8,
+    30vw 120px #ffe8b8,
+    35vw -180px #ffe8b8,
+    44vw 240px #ffe8b8,
+    50vw 0 #ffe8b8,
+    60vw 180px #ffe8b8,
+    68vw 40px #ffe8b8,
+    74vw -130px #ffe8b8,
+    81vw -240px #ffe8b8,
+    88vw 100px #ffe8b8,
+    95vw 60px #ffe8b8;
+    animation: fadeIn 12s linear infinite;/*落下*/
+}
+
+/*** 小さい泡2 ***/
+#body .foam:nth-child(2){
+  width: 10px;
+  height: 10px;
+  filter: blur(2px); /*ぼかし*/
+  /* ±240pxの範囲で影(複製)を作る */
+  box-shadow:
+    7vw 220px 0 #ffe8b8,
+    35vw 20px #ffe8b8,
+    68vw 100px #ffe8b8,
+    93vw -190px #ffe8b8;
+  animation: fadeIn 12.5s linear infinite;/*落下*/
+  animation-delay: 6s; /*開始遅延*/
+}
+
+/*** 中ぐらいの泡 ***/
+#body .foam:nth-child(3){
+  width: 14px;
+  height: 14px;
+  filter: blur(3px); /*ぼかし*/
+  /* ±233pxの範囲で影(複製)を作る */
+  box-shadow:
+    12vw 5px 0 #ffe8b8,
+    32vw -100px #ffe8b8,
+    45vw -180px #ffe8b8,
+    68vw 40px #ffe8b8,
+    77vw 65px #ffe8b8,
+    94vw 230px #ffe8b8;
+  animation: fadeIn 10s linear infinite; /*落下*/
+  animation-delay: 6s; /*開始遅延*/
+}
+
+/*** 大きめの泡 ***/
+#body .foam:nth-child(4){
+  width: 20px;
+  height: 20px;
+  filter: blur(8px); /*ぼかし*/
+  /* ±222pxの範囲で影(複製)を作る */
+  box-shadow:
+    40vw -200px #ffe8b8,
+    80vw 220px #ffe8b8;
+  animation: fadeIn 7s linear infinite; /*落下*/
+  animation-delay: 4s; /*遅延*/
+}
+
+/*** 落下アニメーション ***/
+@keyframes fall{
+  0%{
+    top: -250px;
+  }
+  100% {
+    top: calc(100% + 250px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    bottom: -250px;
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    bottom: calc(100% + 250px);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
